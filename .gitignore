@@ -1,9 +1,2 @@
-/library_management/__manifest__.py
-/student_management/__manifest__.py
-*__manifest__.py
-*__init__.py
-/library_management/reports/
-/student_management/reports/
-*
 
 

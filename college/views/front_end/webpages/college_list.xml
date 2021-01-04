@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="college_list" name="College Records">
+        <t t-call="website.layout">
+            <div class="container">
+                <h3 align="center">College Records</h3>
+                <div style="width:100%">
+                    <table class="table-striped table" style="width:100%">
+                        <tr>
+                            <th>Name</th>
+                            <th>College ID</th>
+                            <th>Address</th>
+                        </tr>
+
+                        <t t-foreach="college" t-as="college">
+                            <tr>
+                                <td>
+                                    <t t-esc="college.college_name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="college.college_id"/>
+                                </td>
+                                <td>
+                                    <t t-esc="college.college_town"/>
+                                </td>
+                            </tr>
+                        </t>
+
+
+                    </table>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

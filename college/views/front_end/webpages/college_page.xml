@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="college_page" name="College Page">
+        <style>
+            /* Style inputs with type="text", select elements and textareas */
+            input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+            }
+
+            /* Style the submit button with a specific background color etc */
+            input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+
+            /* Add a background color and some padding around the form */
+            .container {
+            border-radius: 5px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 20px;
+            }
+            .address{
+            position:relative;
+            margin:20px auto;
+            }
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+
+            /* Firefox */
+            input[type=number] {
+            -moz-appearance: textfield;
+            }
+            #pin{
+            width:100%;
+            display:block;
+            height:50px;
+            }
+            h1{
+            margin-top:20px;
+            margin-bottom:20px;
+            text-align:center;
+            }
+            h5{
+            margin:20px auto;
+            text-weight:bold;
+            }
+            .contents{
+            background-image: url("https://wallpapertag.com/wallpaper/full/2/4/0/114326-large-black-background-tumblr-2560x1600-hd-1080p.jpg");
+            background-color: #cccccc;
+
+            color:white;
+            }
+            #top{
+            display:none;
+            }
+
+        </style>
+        <t t-call="website.layout">
+            <div class="oe_structure contents">
+                <div class="container">
+                    <div style="text-align:center;">
+                        <h2>College Registration</h2>
+
+                    </div>
+                    <br/>
+                    <form action="action_page.php">
+
+                        <div>
+                            <h5>College Specialisation</h5>
+                            <input type="radio" id="engg" name="special" value="engineering"/>
+                            <label for="engg">Engineering</label><br/>
+
+                            <input type="radio" id="arts" name="special" value="arts"/>
+                            <label for="arts">Arts</label><br/>
+
+                        </div>
+
+
+                        <label for="name">College Name</label>
+                        <input type="text" id="name" name="name" placeholder="College Name"/>
+
+                        <label for="college_id">College ID</label>
+                        <input type="text" id="college_id" name="college_id" placeholder="College ID"/>
+
+                        <div>
+                            <label for="college_type">College Type</label>
+                            <select id="college_type" name="college_type">
+                                <option value="public">Public</option>
+                                <option value="private">Private</option>
+                            </select>
+                        </div>
+
+                        <div class="address">
+
+                            <h5>Address: </h5>
+
+                            <label for="town">College Town</label>
+                            <input type="text" id="town" name="town" placeholder="College Town"/>
+
+                            <label for="district">College District</label>
+                            <input type="text" id="district" name="district" placeholder="College District"/>
+
+                            <label for="pin">College Pin Code</label>
+                            <input type="number" id="pin" name="pin"
+                                   placeholder="College Pin Code"/>
+                        </div>
+
+
+                        <input type="submit" value="Submit"/>
+
+                    </form>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
