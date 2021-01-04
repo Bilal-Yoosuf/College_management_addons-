@@ -37,7 +37,19 @@
                                 <field name="category_id"/>
                                 <field name="published_year"/>
                             </group>
+
                         </group>
+                        <notebook style="width:100%;">
+                            <page string="Book Order Line">
+                                <field name="student_ids" >
+                                    <tree editable="bottom">
+                                        <field name="student_name"/>
+                                        <field name="book_title"/>
+                                        <field name="student_taken_type"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>

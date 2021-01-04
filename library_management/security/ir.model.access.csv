@@ -3,3 +3,4 @@ access_book_return,book.return,model_book_return,base.group_user,1,1,1,1
 access_book_registration,book.registration,model_book_registration,,1,1,1,1
 access_book_category,book.category,model_book_category,,1,1,1,1
 access_book_shelf,book.shelf,model_book_shelf,,1,1,1,1
+access_book_status,book.status,model_book_status,,1,1,1,1

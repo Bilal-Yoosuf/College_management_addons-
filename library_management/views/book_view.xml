@@ -35,8 +35,11 @@
               <field name="phone" />
               <field name="genere"/>
             </group>
+
+
+
             <group>
-              <field name="publisher"/>
+<!--              <field name="publisher"/>-->
               <field name="taken_type" />
               <field name="pickup" />
               <field name="ret" />
